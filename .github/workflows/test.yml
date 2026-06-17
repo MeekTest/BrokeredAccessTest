@@ -23,7 +23,7 @@ jobs:
       
       - name: Verify secret
         run: |
-          if [ -z "${{ steps.op.outputs.TEST }}" ]; then
+          if [ -z "$TEST" ]; then
             echo "ERROR: Secret is empty"
             exit 1
           else
