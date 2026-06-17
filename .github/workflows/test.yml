@@ -1,0 +1,20 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Load secrets from 1Password
+        uses: 1Password/load-secrets-action@v5beta
+        env:
+          OP_WORKLOAD_ID: "Y6K5R5TKLJA23NIMI3DKQAHLTE"
+          OP_ENVIRONMENT_ID: "t3vb75qwdjlhxpoo3rkkha42te"
+          OP_INTEGRATION_KEY: ${{ secrets.OP_INTEGRATION_KEY }}
+
+      - name: Print secret
+        run: |
+          echo "Secret was loaded successfully"
+          echo "Value: $TEST"
