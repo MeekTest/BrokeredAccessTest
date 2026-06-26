@@ -17,8 +17,8 @@ jobs:
         with:
           export-env: true
         env:
-          OP_WORKLOAD_ID: "Y6K5R5TKLJA23NIMI3DKQAHLTE"
-          OP_ENVIRONMENT_ID: "t3vb75qwdjlhxpoo3rkkha42te"
+          OP_WORKLOAD_ID: "NAS3LPVZE5CD5N2H675DCGSMUI"
+          OP_ENVIRONMENT_ID: "ncfilqz6ygvy6whnkywhuhe64a"
           OP_INTEGRATION_KEY: ${{ secrets.OP_INTEGRATION_KEY }}
       
       - name: Verify secret
